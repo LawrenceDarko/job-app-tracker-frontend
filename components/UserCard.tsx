@@ -3,6 +3,7 @@ import React from 'react'
 
 const UserCard = ({ isMobile}:{ isMobile?: boolean}) => {
     // const { user } = useAuthContext()
+    
     const { data: session } = useSession()
     return (
         <div className="flex md:hidden items-center p-2 rounded shadow-md cursor-pointer">

@@ -35,6 +35,7 @@ const Login = () => {
             });
 
             console.log("SIGN IN RESULT:", result)
+            
         
             if (result.error) {
                 setErrorMsg(result.error);

@@ -49,7 +49,7 @@ const AddJobApplicationModal: React.FC = () => {
     const endpoint = '/jobs';
     const { isOpen, onClose } = useJobApplicationStore();
 
-    const { control, handleSubmit, formState: { errors }, reset} = useForm<FieldValues>({defaultValues: {
+    const { control, handleSubmit} = useForm<FieldValues>({defaultValues: {
         title: '',
         company: '',
         status: '',

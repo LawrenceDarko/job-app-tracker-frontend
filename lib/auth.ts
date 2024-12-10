@@ -9,7 +9,7 @@ export const authOptions: NextAuthOptions = {
             email: { label: 'Email', type: 'email' },
             password: { label: 'Password', type: 'password' },
         },
-        async authorize(credentials) {
+        async authorize(credentials, req) {
             try {
                 // const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/auth/login`, {
                 //     email: credentials?.email,

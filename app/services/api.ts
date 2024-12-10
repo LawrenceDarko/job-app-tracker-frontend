@@ -98,7 +98,7 @@ export const useOpenApplication = (jobPostId: string) => {
     const queryClient = useQueryClient();
     return useMutation({
         mutationFn: async (data: any = []) => {
-            const response = await api.post(`/jobpool/${jobPostId}/add-to-jobs`);
+            const response = await api.post(`/jobpool/${jobPostId}/add-to-jobs`, data);
             return response.data;
         },
         onSuccess: () => {

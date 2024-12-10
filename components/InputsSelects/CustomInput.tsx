@@ -70,9 +70,9 @@ const CustomInput: React.FC<CustomInputProps> = ({
     rules,
     placeholder,
     disabled = false,
-    inputHeight = '45px',
+    // inputHeight = '45px',
     inputMode,
-    pattern,
+    // pattern,
     customStyles
 
 }) => {

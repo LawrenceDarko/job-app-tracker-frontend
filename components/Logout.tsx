@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { CiLogout } from 'react-icons/ci';
 import DialogModal from './Modals/DialogModal';
 import { signOut } from 'next-auth/react';

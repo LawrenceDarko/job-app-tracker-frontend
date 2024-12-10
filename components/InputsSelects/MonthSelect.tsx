@@ -10,9 +10,9 @@ interface MonthPickerProps {
     date: any;
 }
 
-const MonthPicker: React.FC<MonthPickerProps> = ({ onSelectMonth, setDate, date }) => {
+const MonthPicker: React.FC<MonthPickerProps> = ({ setDate, date }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
+    // const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
     const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
 
     
@@ -31,7 +31,7 @@ const MonthPicker: React.FC<MonthPickerProps> = ({ onSelectMonth, setDate, date 
     const handleSelectMonth = (monthIndex: number) => {
         const firstDay = new Date(selectedYear, monthIndex, 1);
         const lastDay = new Date(selectedYear, monthIndex + 1, 0);
-        setSelectedMonth(`${months[monthIndex]} ${selectedYear}`);
+        // setSelectedMonth(`${months[monthIndex]} ${selectedYear}`);
         setIsOpen(false);
         // onSelectMonth(firstDay, lastDay);
 

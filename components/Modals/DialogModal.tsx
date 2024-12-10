@@ -34,7 +34,7 @@ const DialogModal: React.FC<DialogModalProps> = ({body, label, icon: Icon, callb
                 callback()
             }
         } catch (error) {
-            // console.log('ERROR REJECTING', error)
+            console.log('ERROR REJECTING', error)
         }
     }
 

@@ -20,7 +20,7 @@ interface DateRangePickerProps {
     className?: React.HTMLAttributes<HTMLDivElement>['className'];
 }
 
-const DateRangePicker: React.FC<DateRangePickerProps> = ({className, date, setDate, placeholder}) => {
+const DateRangePicker: React.FC<DateRangePickerProps> = ({className, date, setDate}) => {
 
 
     return (
@@ -28,7 +28,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({className, date, setDa
         <Popover>
             <PopoverTrigger asChild>
             <Button
-                size="calender"
+                size="default"
                 id="date"
                 variant={"outline"}
                 className={cn(

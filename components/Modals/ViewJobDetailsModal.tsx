@@ -7,14 +7,14 @@ import { useFetchJobById } from '@/app/services/api';
 import useJobDetailsStore from '@/app/hooks/useJobDetailsStore';
 import Helpers from '@/app/services/helpers';
 
-interface JobDetails {
-    companyName: string;
-    jobTitle: string;
-    location: string;
-    status: string;
-    dateApplied: string;
-    notes: string;
-}
+// interface JobDetails {
+//     companyName: string;
+//     jobTitle: string;
+//     location: string;
+//     status: string;
+//     dateApplied: string;
+//     notes: string;
+// }
 
 const ViewJobDetails: React.FC = () => {
     

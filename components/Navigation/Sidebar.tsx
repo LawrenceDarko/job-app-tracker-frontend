@@ -17,7 +17,7 @@ const Sidebar = () => {
             <div className='pb-8 lg:flex justify-start items-center gap-2 hidden'>
                 <Link href='/'>
                     <Image
-                        src='/images/logo2.png'
+                        src='/images/logo1.png'
                         width={170}
                         height={50}
                         alt='logo'

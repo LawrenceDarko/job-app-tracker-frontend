@@ -16,7 +16,7 @@ interface Document {
 }
 
 const DocumentsPage = () => {
-  const { data: userDocuments, isLoading, error, refetch } = useFetchUserDocuments('/documents');
+  const { data: userDocuments } = useFetchUserDocuments('/documents');
   const [documents, setDocuments] = useState<Document[]>([]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileType, setFileType] = useState<string>('Resume'); // Default to 'Resume'
@@ -28,19 +28,19 @@ const DocumentsPage = () => {
   console.log('User Doc', userDocuments);
 
   // Fetch documents from the backend
-  const fetchDocuments = async () => {
-    try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/documents`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${authToken}`
-        },
-      }); // Adjust endpoint
-      setDocuments(response?.data);
-    } catch (error) {
-      console.error('Error fetching documents:', error);
-    }
-  };
+  // const fetchDocuments = async () => {
+  //   try {
+  //     const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/documents`, {
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         'Authorization': `Bearer ${authToken}`
+  //       },
+  //     }); // Adjust endpoint
+  //     setDocuments(response?.data);
+  //   } catch (error) {
+  //     console.error('Error fetching documents:', error);
+  //   }
+  // };
 
   useEffect(() => {
     if (userDocuments?.length) {

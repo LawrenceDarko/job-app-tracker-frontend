@@ -6,16 +6,14 @@ import DBLTable from "dbl-table";
 import { IoMdCreate, IoMdRefresh } from "react-icons/io";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { RiDeleteBinLine } from "react-icons/ri";
-import { FaPlus } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Loader from "../common/Loader";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
-import DialogModal from "../Modals/DialogModal";
-import { IApplication } from "@/typings/types";
 import useJobApplicationStore from "@/app/hooks/useJobApplicationStore";
 import { useDeleteJobApplication, useFetchJobApplicationData } from "@/app/services/api";
 import Helpers from "@/app/services/helpers";
 import useJobDetailsStore from "@/app/hooks/useJobDetailsStore";
+import DialogModal from "../Modals/DialogModal";
 
 const ApplicationsList = () => {
     // Fetch job applications with react-query

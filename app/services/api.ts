@@ -1,7 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { getSession } from 'next-auth/react';
-import { toast } from 'react-hot-toast';
 
 
 const BASE_URL: string = process.env.NEXT_PUBLIC_BACKEND_BASE_URL || '';

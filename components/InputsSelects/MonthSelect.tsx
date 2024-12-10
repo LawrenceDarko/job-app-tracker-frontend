@@ -45,7 +45,7 @@ const MonthPicker: React.FC<MonthPickerProps> = ({ onSelectMonth, setDate, date 
     return (
         <div className="relative">
             <Button
-                size="calender"
+                size="form"
                 variant="outline"
                 id="date"
                 className={cn(

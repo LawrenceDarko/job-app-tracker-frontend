@@ -2,14 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import Select, { StylesConfig } from 'react-select';
-import { useForm, FieldValues, SubmitHandler, Controller } from 'react-hook-form';
+import { useForm, FieldValues, Controller } from 'react-hook-form';
 import ModalTemplate from './ModalTemplate';
 import CustomInput from '../InputsSelects/CustomInput';
 import DatePickerComp from '../InputsSelects/DatePickerComp';
 import toast from 'react-hot-toast';
 import useJobApplicationStore from '@/app/hooks/useJobApplicationStore';
-import { useCreateJobApplication, useUpdateJobApplication } from '@/app/services/api';
-import Helpers from '@/app/services/helpers';
+import { useUpdateJobApplication } from '@/app/services/api';
 import { jobApplicationFields } from '@/app/constants';
 
 
@@ -49,7 +48,7 @@ export const customStyles: StylesConfig = {
 const AddJobApplicationModal: React.FC = () => {
     const { isEditJobApplicationOpen, onEditJobApplicationClose, editJobApplicationDetails } = useJobApplicationStore();
 
-    const { control, handleSubmit, formState: { errors }, reset, setValue} = useForm<FieldValues>({defaultValues: {
+    const { control, handleSubmit, setValue} = useForm<FieldValues>({defaultValues: {
         title: '',
         company: '',
         status: '',

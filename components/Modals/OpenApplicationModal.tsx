@@ -1,11 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ModalTemplate from './ModalTemplate';
-import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaClipboardCheck, FaStickyNote, FaDollarSign, FaSuitcase } from 'react-icons/fa';
-import { useCreateJobApplication, useFetchJobById, useFetchJobPostById, useOpenApplication } from '@/app/services/api';
+import { useFetchJobPostById, useOpenApplication } from '@/app/services/api';
 import useJobDetailsStore from '@/app/hooks/useJobDetailsStore';
-import Helpers from '@/app/services/helpers';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 
@@ -13,8 +11,8 @@ import { useRouter } from 'next/navigation';
 
 const OpenApplicationModal: React.FC = () => {
     
-    const { isApplyJobOpen, onApplyJobOpen, onApplyJobClose, jobPostId } = useJobDetailsStore();
-    const { data: jobDetails, isLoading, error, refetch } = useFetchJobPostById(jobPostId);
+    const { isApplyJobOpen, onApplyJobClose, jobPostId } = useJobDetailsStore();
+    const { data: jobDetails } = useFetchJobPostById(jobPostId);
     const router = useRouter();
 
     const createJobMutation = useOpenApplication(jobPostId);

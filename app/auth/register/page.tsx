@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { Controller, FieldValues, useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import { useRouter } from 'next/navigation';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 // import { useAuthContext } from "@/app/context/AuthContext";
@@ -9,22 +9,13 @@ import CustomInput from "@/components/InputsSelects/CustomInput";
 import Link from "next/link";
 // import ApiService from "@/app/services/api";
 import toast from "react-hot-toast";
-import Select from 'react-select';
-import { customStyles } from "@/app/constants";
 import axios from "axios";
 
 
 const Register = () => {
-    const { control, handleSubmit, formState: { errors } } = useForm<FieldValues>();
+    const { control, handleSubmit } = useForm<FieldValues>();
     const [errorMsg, setErrorMsg] = useState('');
     const [loading, setLoading] = useState<boolean>(false);
-    // const { dispatch } = useAuthContext();
-    const [accountType, setAccountType] = useState<string | null>(null);
-
-    const accountTypeOptions = [
-        { value: 'personal', label: 'Personal Use' },
-        { value: 'organization', label: 'Organizational Use' }
-    ];
 
     const router = useRouter();
 

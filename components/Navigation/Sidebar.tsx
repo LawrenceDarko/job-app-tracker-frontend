@@ -5,7 +5,6 @@ import { sidebarLinks } from '@/app/constants'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { CiLogout } from "react-icons/ci";
 import Image from 'next/image'
 import Logout from '../Logout'
 import UserCard from '../UserCard'

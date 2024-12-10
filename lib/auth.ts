@@ -1,5 +1,4 @@
 import CredentialsProvider from 'next-auth/providers/credentials';
-import axios from 'axios';
 import { NextAuthOptions } from 'next-auth';
 
 export const authOptions: NextAuthOptions = {
@@ -10,7 +9,7 @@ export const authOptions: NextAuthOptions = {
             email: { label: 'Email', type: 'email' },
             password: { label: 'Password', type: 'password' },
         },
-        async authorize(credentials, req) {
+        async authorize(credentials) {
             try {
                 // const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/auth/login`, {
                 //     email: credentials?.email,

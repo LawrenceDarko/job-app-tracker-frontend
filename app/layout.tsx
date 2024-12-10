@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from 'react-hot-toast';
-import { AuthProvider } from "@/components/Provider";
 import { Provider } from "@/components/Provider";
 import AllModals from "@/components/Modals/AllModals";
 

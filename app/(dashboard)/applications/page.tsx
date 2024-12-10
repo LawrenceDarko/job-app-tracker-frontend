@@ -1,6 +1,6 @@
 'use client'
 import ApplicationsList from '@/components/Tables/ApplicationsList';
-import React, { useState } from 'react';
+import React from 'react';
 
 const ApplicationsPage = () => {
 

@@ -1,4 +1,3 @@
-import { useAuthContext } from '@/app/context/AuthContext'
 import { useSession } from 'next-auth/react'
 import React from 'react'
 

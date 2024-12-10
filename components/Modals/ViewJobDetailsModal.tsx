@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ModalTemplate from './ModalTemplate';
 import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaClipboardCheck, FaStickyNote, FaDollarSign, FaSuitcase } from 'react-icons/fa';
-import { useCreateJobApplication, useFetchJobById } from '@/app/services/api';
+import { useFetchJobById } from '@/app/services/api';
 import useJobDetailsStore from '@/app/hooks/useJobDetailsStore';
 import Helpers from '@/app/services/helpers';
 
@@ -20,7 +20,7 @@ const ViewJobDetails: React.FC = () => {
     
     const { isOpen, onClose, jobId } = useJobDetailsStore();
     // const [jobDetails, setJobDetails] = useState<JobDetails | any>(null);
-    const { data: jobDetails, isLoading, error, refetch } = useFetchJobById(jobId);
+    const { data: jobDetails } = useFetchJobById(jobId);
 
     // useEffect(() => {
     //     if (isOpen) {

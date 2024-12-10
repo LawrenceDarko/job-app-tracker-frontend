@@ -10,10 +10,7 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { FaExclamation } from "react-icons/fa";
 import { IconType } from 'react-icons';
-import { useForm, FieldValues } from 'react-hook-form';
-import toast from 'react-hot-toast';
 
 
 interface DialogModalProps {

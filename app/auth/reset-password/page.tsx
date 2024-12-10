@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import axios from 'axios'
 import { useRouter } from 'next/navigation';
@@ -14,12 +14,10 @@ import toast from "react-hot-toast";
 
 
 const ForgotPassword = () => {
-    const {control, handleSubmit, formState:{errors}} = useForm<FieldValues>()
-    const [errorMsg, setErrorMsg] = useState('')
-    const [loading, setLoading] = useState<boolean>(false)
+    const {control, handleSubmit} = useForm<FieldValues>()
+    const [errorMsg] = useState('')
+    const [loading] = useState<boolean>(false)
     // const { dispatch } = useAuthContext()
-
-    const router = useRouter()
 
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
         const pendingToast = toast.loading('Sending Email...', { duration: 0 });

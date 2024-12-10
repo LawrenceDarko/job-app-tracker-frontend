@@ -6,7 +6,7 @@ import { useFetchJobPreferences, useInsertOrUpdateJobPreferences } from '@/app/s
 import toast from 'react-hot-toast';
 
 const SettingsPage = () => {
-    const { data: jobPreferences, isLoading, error } = useFetchJobPreferences('/preferences');
+    const { data: jobPreferences, isLoading } = useFetchJobPreferences('/preferences');
     const mutation = useInsertOrUpdateJobPreferences('/preferences');
 
     const [preferences, setPreferences] = useState<{

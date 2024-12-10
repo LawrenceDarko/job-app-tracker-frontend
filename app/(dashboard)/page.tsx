@@ -11,12 +11,12 @@ import { FaRegFileAlt, FaCalendarCheck, FaHandshake, FaTimesCircle } from 'react
 import Link from 'next/link';
 
 const Dashboard = () => {
-    const { data: dashboardstats = [], isLoading, error } = useFetchDashboardStats('/jobs/stats');
-    const { data: matchingJobs = [], isLoading: matchLoad, error: matchError } = useFetchDashboardStats('/jobpool/top-matching');
-    const { data: interviews, isLoading: isInterviewLoading, error: interviewError} = useFetchUpcomingInterviews('/jobs/interviews/upcoming');
-    const { data: deadlines, isLoading: isDeadlineLoading, error: deadlineError} = useFetchUpcomingDeadlines('/jobs/deadlines/upcoming');
+    const { data: dashboardstats = [] } = useFetchDashboardStats('/jobs/stats');
+    const { data: matchingJobs = []} = useFetchDashboardStats('/jobpool/top-matching');
+    const { data: interviews} = useFetchUpcomingInterviews('/jobs/interviews/upcoming');
+    const { data: deadlines} = useFetchUpcomingDeadlines('/jobs/deadlines/upcoming');
     const { onJobPostingDetailsOpen, setJobPostId, onApplyJobOpen } = useJobDetailsStore();
-    const { onOpen, onEditJobApplicationOpen, setEditJobApplicationDetails } = useJobApplicationStore();
+    const { onOpen } = useJobApplicationStore();
 
     const handleApplyClick = (jobId: string) => {
         setJobPostId(jobId);
@@ -68,7 +68,7 @@ const Dashboard = () => {
     
     console.log("interviews", interviews);
 
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+    // const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
     
     return (
         <div className="p-8 space-y-8 bg-gray-100 min-h-screen">

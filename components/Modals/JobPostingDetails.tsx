@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ModalTemplate from './ModalTemplate';
 import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaClipboardCheck, FaStickyNote, FaDollarSign, FaSuitcase } from 'react-icons/fa';
-import { useCreateJobApplication, useFetchJobById, useFetchJobPostById } from '@/app/services/api';
+import { useFetchJobPostById } from '@/app/services/api';
 import useJobDetailsStore from '@/app/hooks/useJobDetailsStore';
 import Helpers from '@/app/services/helpers';
 
@@ -12,7 +12,7 @@ const JobPostingDetails: React.FC = () => {
     
     const { isJobPostingDetailsOpen, onJobPostingDetailsClose, jobPostId } = useJobDetailsStore();
     // const [jobDetails, setJobDetails] = useState<JobDetails | any>(null);
-    const { data: jobDetails, isLoading, error, refetch } = useFetchJobPostById(jobPostId);
+    const { data: jobDetails } = useFetchJobPostById(jobPostId);
 
     const getStatusColor = (status: string) => {
         switch (status) {

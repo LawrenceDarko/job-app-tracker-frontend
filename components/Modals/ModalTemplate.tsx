@@ -20,7 +20,7 @@ interface ModalTemplateProps {
     longModal?: boolean;
 }
 
-const ModalTemplate: React.FC<ModalTemplateProps> = ({paddingTop, isOpen, body, title, onClose, onSubmit, secondaryAction, secondaryActionLabel, actionlabel, footer, customSizeStyles, longModal}) => {
+const ModalTemplate: React.FC<ModalTemplateProps> = ({ isOpen, body, title, onClose, onSubmit, secondaryAction, secondaryActionLabel, actionlabel, footer, customSizeStyles, longModal}) => {
 
     const [showModal, setShowModal] = useState(isOpen)
 

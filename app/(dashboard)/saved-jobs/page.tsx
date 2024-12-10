@@ -2,22 +2,12 @@
 
 import useJobDetailsStore from '@/app/hooks/useJobDetailsStore';
 import { useFetchSavedJobs, useRemoveSavedJob } from '@/app/services/api';
-import { useState } from 'react';
 import { FaTrashAlt, FaInfoCircle } from 'react-icons/fa';
 
-// interface SavedJob {
-//   id: number;
-//   title: string;
-//   company: string;
-//   location: string;
-//   jobType: string;
-//   dateSaved: string;
-//   description: string;
-// }
 
 
 const SavedJobPage = () => {
-  const { data: savedJobs, isLoading, error } = useFetchSavedJobs('/saved-jobs');
+  const { data: savedJobs } = useFetchSavedJobs('/saved-jobs');
   // const [savedJobs, setSavedJobs] = useState<SavedJob[]>(initialSavedJobs);
   // const [selectedJob, setSelectedJob] = useState<SavedJob | null>(null);
   const { onJobPostingDetailsOpen, setJobPostId, onApplyJobOpen } = useJobDetailsStore();

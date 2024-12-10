@@ -1,12 +1,9 @@
 'use client'
 
-import Link from 'next/link'
 import React from 'react'
-import Image from 'next/image'
 import MobileNav from './MobileNav'
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 // import Helpers from '@/app/services/helpers'
-import Logout from '../Logout'
 import { useSession } from 'next-auth/react'
 import UserAccount from '../UserAccount'
 // import { SignedIn, UserButton } from "@clerk/nextjs";

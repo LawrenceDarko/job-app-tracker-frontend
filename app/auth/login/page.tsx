@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useEffect } from "react";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import axios from 'axios'
+import { useState } from "react";
+import { FieldValues, useForm } from "react-hook-form";
 import { useRouter } from 'next/navigation';
 // import { cookies } from 'next/headers'; 
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
@@ -16,7 +15,7 @@ import { signIn } from 'next-auth/react';
 
 const Login = () => {
     // const { dispatch } = useAuthContext()
-    const {control, handleSubmit, formState: {errors}} = useForm<FieldValues>()
+    const {control, handleSubmit} = useForm<FieldValues>()
     const [errorMsg, setErrorMsg] = useState('')
     const [loading, setLoading] = useState<boolean>(false)
 

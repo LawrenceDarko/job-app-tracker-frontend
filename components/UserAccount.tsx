@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import { signOut, useSession } from 'next-auth/react';
 import DialogModal from './Modals/DialogModal';
-import { CiLogout, CiMoneyBill } from 'react-icons/ci';
+import { CiLogout } from 'react-icons/ci';
 import { AiOutlineSetting } from 'react-icons/ai';
-import { RxAvatar } from 'react-icons/rx';
 import { TbLayersDifference } from 'react-icons/tb';
 import Link from 'next/link';
 

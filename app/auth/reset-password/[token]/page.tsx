@@ -10,9 +10,9 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 const NewPassword = ({params}: {params: { token: string}}) => {
-    const { control, handleSubmit, formState: { errors }, watch } = useForm<FieldValues>()
-    const [errorMsg, setErrorMsg] = useState('')
-    const [loading, setLoading] = useState<boolean>(false)
+    const { control, handleSubmit, watch } = useForm<FieldValues>()
+    const [errorMsg ] = useState('')
+    const [loading] = useState<boolean>(false)
     const router = useRouter()
     const pawsd = watch('password')
 

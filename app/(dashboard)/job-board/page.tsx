@@ -2,19 +2,18 @@
 
 import { useFetchJobPostings, useSaveJob } from '@/app/services/api';
 import JobCard from '@/components/JobCard';
-import { useSession } from 'next-auth/react';
 // pages/job-search.tsx
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { FaBriefcase, FaMapMarkerAlt, FaHeart, FaSearch, FaFilter } from 'react-icons/fa';
+import { FaSearch, FaFilter } from 'react-icons/fa';
 
 
 
 const JobSearchPage = () => {
-    const { data: session} = useSession()
-    const { data: jobListings = [], isLoading, error } = useFetchJobPostings('/jobpool');
+    // const { data: session} = useSession()
+    const { data: jobListings = [] } = useFetchJobPostings('/jobpool');
     
-    const [savedJobs, setSavedJobs] = useState<string[]>([]);
+    // const [savedJobs, setSavedJobs] = useState<string[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [filter, setFilter] = useState<string>('all');
 

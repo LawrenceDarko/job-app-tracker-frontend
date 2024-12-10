@@ -1,4 +1,4 @@
-import Select, { StylesConfig } from 'react-select';
+import { StylesConfig } from 'react-select';
 import { RiDashboardLine } from "react-icons/ri";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaClipboardList } from "react-icons/fa";

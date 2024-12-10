@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Controller } from 'react-hook-form';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEyeSlash } from 'react-icons/fa';
 import { IoEyeSharp } from "react-icons/io5";
 import { Switch } from "@/components/ui/switch"
 

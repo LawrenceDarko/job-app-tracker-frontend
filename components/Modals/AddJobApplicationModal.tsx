@@ -2,17 +2,12 @@
 
 import React, { useState } from 'react';
 import Select, { StylesConfig } from 'react-select';
-import { useForm, FieldValues, SubmitHandler, Controller } from 'react-hook-form';
+import { useForm, FieldValues, Controller } from 'react-hook-form';
 import ModalTemplate from './ModalTemplate';
 // import useAddTransactionStore from '@/app/hooks/useAddTransactionStore';
 import CustomInput from '../InputsSelects/CustomInput';
 import DatePickerComp from '../InputsSelects/DatePickerComp';
-import { setDate } from 'date-fns';
-// import ApiService from '@/app/services/api';
-import { PiBankLight } from 'react-icons/pi';
-// import useListData from '@/app/hooks/useListData';
 import toast from 'react-hot-toast';
-import { Button } from '../ui/button';
 import useJobApplicationStore from '@/app/hooks/useJobApplicationStore';
 import { useCreateJobApplication } from '@/app/services/api';
 

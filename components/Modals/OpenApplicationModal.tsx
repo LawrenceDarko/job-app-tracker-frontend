@@ -20,12 +20,12 @@ const OpenApplicationModal: React.FC = () => {
     const handleOpenApplication = async () => { 
         createJobMutation.mutate({}, {
             onSuccess: () => {
-                toast.success('Job application created successfully!'),
-                router.push(`${jobDetails?.link}`)
+                toast.success('Job application created successfully!');
+                router.push(`${jobDetails?.link}`);
             },
             onError: (error: any) => {
                 console.log("error", error);
-                toast.error(`Error creating job application: ${error?.response?.data?.message}`)
+                toast.error(`Error creating job application: ${error?.response?.data?.message}`);
             }
         });
     }
